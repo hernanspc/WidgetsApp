@@ -23,14 +23,43 @@ class _HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
+      // physics: BouncingScrollPhysics(),
       itemCount: appMenuItems.length,
       itemBuilder: (context, index) {
-        final item = appMenuItems[index];
+        final menuItem = appMenuItems[index];
 
-        return ListTile(
-          title: Text(item.title),
-          subtitle: Text(item.subTitle),
-        );
+        return _CustomListTitle(menuItem: menuItem);
+      },
+    );
+  }
+}
+
+class _CustomListTitle extends StatelessWidget {
+  const _CustomListTitle({
+    super.key,
+    required this.menuItem,
+  });
+
+  final MenuItem menuItem;
+
+  @override
+  Widget build(BuildContext context) {
+    final colors = Theme.of(context).colorScheme;
+
+    return ListTile(
+      leading: Icon(
+        menuItem.icon,
+        color: colors.primary,
+      ),
+      trailing: Icon(
+        Icons.arrow_forward_ios_outlined,
+        color: colors.primary,
+      ),
+      minLeadingWidth: 5,
+      title: Text(menuItem.title),
+      subtitle: Text(menuItem.subTitle),
+      onTap: () {
+        //TODO: LLEVAR A OTRA PANTALLA
       },
     );
   }
