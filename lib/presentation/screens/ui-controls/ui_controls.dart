@@ -44,41 +44,49 @@ class _UiControlsViewState extends State<_UiControlsView> {
             });
           },
         ),
-        RadioListTile(
-          title: const Text('By car'),
-          subtitle: const Text('Viajar con carro'),
-          value: Transportation.car,
-          groupValue: selectedTransportation,
-          onChanged: (value) => setState(() {
-            selectedTransportation = Transportation.car;
-          }),
-        ),
-        RadioListTile(
-          title: const Text('By Barco'),
-          subtitle: const Text('Viajar con barco'),
-          value: Transportation.boat,
-          groupValue: selectedTransportation,
-          onChanged: (value) => setState(() {
-            selectedTransportation = Transportation.boat;
-          }),
-        ),
-        RadioListTile(
-          title: const Text('By Avion'),
-          subtitle: const Text('Viajar con Avion'),
-          value: Transportation.plane,
-          groupValue: selectedTransportation,
-          onChanged: (value) => setState(() {
-            selectedTransportation = Transportation.plane;
-          }),
-        ),
-        RadioListTile(
-          title: const Text('By Submarino'),
-          subtitle: const Text('Viajar con Submarino'),
-          value: Transportation.submarine,
-          groupValue: selectedTransportation,
-          onChanged: (value) => setState(() {
-            selectedTransportation = Transportation.submarine;
-          }),
+        ExpansionTile(
+          title: const Text(
+            'Vehiculo de transporte',
+          ),
+          subtitle: Text('$selectedTransportation'),
+          children: [
+            RadioListTile(
+              title: const Text('By car'),
+              subtitle: const Text('Viajar con carro'),
+              value: Transportation.car,
+              groupValue: selectedTransportation,
+              onChanged: (value) => setState(() {
+                selectedTransportation = Transportation.car;
+              }),
+            ),
+            RadioListTile(
+              title: const Text('By Barco'),
+              subtitle: const Text('Viajar con barco'),
+              value: Transportation.boat,
+              groupValue: selectedTransportation,
+              onChanged: (value) => setState(() {
+                selectedTransportation = Transportation.boat;
+              }),
+            ),
+            RadioListTile(
+              title: const Text('By Avion'),
+              subtitle: const Text('Viajar con Avion'),
+              value: Transportation.plane,
+              groupValue: selectedTransportation,
+              onChanged: (value) => setState(() {
+                selectedTransportation = Transportation.plane;
+              }),
+            ),
+            RadioListTile(
+              title: const Text('By Submarino'),
+              subtitle: const Text('Viajar con Submarino'),
+              value: Transportation.submarine,
+              groupValue: selectedTransportation,
+              onChanged: (value) => setState(() {
+                selectedTransportation = Transportation.submarine;
+              }),
+            ),
+          ],
         ),
       ],
     );
