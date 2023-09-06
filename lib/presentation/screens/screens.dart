@@ -6,6 +6,6 @@ export 'package:widgets_app/presentation/screens/home/home_screen.dart';
 
 export 'package:widgets_app/presentation/screens/animated/animated_screen.dart';
 export 'package:widgets_app/presentation/screens/app_tutorial/app_tutorial.dart';
-export 'package:widgets_app/presentation/screens/infinite_scroll/infinite_scroll.dart';
+export 'package:widgets_app/presentation/screens/infinite_scroll/infinite_scroll_screen.dart';
 export 'package:widgets_app/presentation/screens/snackbars/snackbars_screen.dart';
 export 'package:widgets_app/presentation/screens/ui-controls/ui_controls.dart';
